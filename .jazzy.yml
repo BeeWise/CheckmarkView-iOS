@@ -1,0 +1,8 @@
+author: Bee Wise Development
+author_url: https://twitter.com/ 
+github_url: https://github.com/BeeWise/CheckmarkView
+root_url: https://BeeWise.github.io/CheckmarkView/
+module: CheckmarkView
+output: docs
+theme: fullwidth
+xcodebuild_arguments: [-workspace, 'CheckmarkView.xcworkspace', -scheme, 'CheckmarkView-iOS']
