@@ -10,7 +10,5 @@ import XCTest
 @testable import CheckmarkView
 
 class CheckmarkViewTests: XCTestCase {
-    func testFrameworkName() {
-        XCTAssertEqual(CheckmarkView.name, "CheckmarkView")
-    }
+    
 }
