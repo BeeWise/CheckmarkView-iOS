@@ -29,6 +29,18 @@ open class CheckmarkView: UIView {
         }
     }
     
+    public var checkmarkCapStyle: CGLineCap = .butt {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
+    
+    public var checkmarkJoinStyle: CGLineJoin = .miter {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
+    
     @IBInspectable public var checkmarkType: Int = CheckmarkView.checkmarkType.variant1.rawValue {
         didSet {
             self.setNeedsDisplay()
@@ -53,7 +65,13 @@ open class CheckmarkView: UIView {
         }
     }
     
-    @IBInspectable public var borderColor: UIColor = UIColor.clear {
+    @IBInspectable public var checkedBorderColor: UIColor = UIColor.clear {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable public var uncheckedBorderColor: UIColor = UIColor.clear {
         didSet {
             self.setNeedsDisplay()
         }
@@ -90,7 +108,8 @@ open class CheckmarkView: UIView {
     func drawBorder(_ rect: CGRect) {
         let ovalRect = rect.inset(by: self.outerInsets)
         let ovalPath = UIBezierPath(ovalIn: ovalRect)
-        self.borderColor.setStroke()
+        let color = self.isChecked ? self.checkedBorderColor : self.uncheckedBorderColor
+        color.setStroke()
         ovalPath.lineWidth = self.borderWidth
         ovalPath.stroke()
     }
@@ -104,8 +123,8 @@ open class CheckmarkView: UIView {
         bezierPath.addLine(to: checkmarkPoints.pointC)
         self.checkmarkColor.setStroke()
         bezierPath.lineWidth = self.checkmarkWidth
-        bezierPath.lineCapStyle = .round
-        bezierPath.lineJoinStyle = .round
+        bezierPath.lineCapStyle = self.checkmarkCapStyle
+        bezierPath.lineJoinStyle = self.checkmarkJoinStyle
         bezierPath.stroke()
     }
     
