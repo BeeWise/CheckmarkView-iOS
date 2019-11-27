@@ -14,7 +14,7 @@ Pixel perfect checkmark view for iOS, for any size you want
 
 ## Screenshots
 
-<img src="https://user-images.githubusercontent.com/6670019/69714216-ae514f00-110e-11ea-8d3c-2ea3ded2ac48.png" width="75%"></img> 
+<img src="https://user-images.githubusercontent.com/6670019/69714216-ae514f00-110e-11ea-8d3c-2ea3ded2ac48.png" width="50%"></img> 
 
 ## Requirements
 
@@ -40,7 +40,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 use_frameworks!
 
-pod 'CheckmarkView', '~> 0.0.1'
+pod 'CheckmarkView-iOS', '~> 0.0.2'
 ```
 
 Then, run the following command:
@@ -66,7 +66,7 @@ $ brew install carthage
 To integrate **CheckmarkView** into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "BeeWise/CheckmarkView-iOS" ~> 0.0.1
+github "BeeWise/CheckmarkView-iOS" ~> 0.0.2
 ```
 
 </details>
@@ -84,7 +84,7 @@ import PackageDescription
 let package = Package(
     name: "HelloCheckmarkView",
     dependencies: [
-        .package(url: "https://github.com/BeeWise/CheckmarkView-iOS.git", .upToNextMajor(from: "0.0.1"))
+        .package(url: "https://github.com/BeeWise/CheckmarkView-iOS.git", .upToNextMajor(from: "0.0.2"))
     ],
     targets: [
         .target(name: "HelloCheckmarkView", dependencies: ["CheckmarkView"])
