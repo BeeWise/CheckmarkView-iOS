@@ -1,16 +1,20 @@
 # CheckmarkView - iOS
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/BeeWise/CheckmarkView-iOS/blob/master/LICENSE)
-
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-Pixel perfect checkmark view for iOS
+Pixel perfect checkmark view for iOS, for any size you want
 
+- [Screenshots](#screenshots)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
+
+## Screenshots
+
+<img src="https://user-images.githubusercontent.com/6670019/69714216-ae514f00-110e-11ea-8d3c-2ea3ded2ac48.png" width="75%"></img> 
 
 ## Requirements
 
@@ -91,7 +95,7 @@ let package = Package(
 
 ### Manually
 
-If you prefer not to use either of the aforementioned dependency managers, you can integrate CheckmarkView into your project manually.
+If you prefer not to use either of the aforementioned dependency managers, you can integrate **CheckmarkView** into your project manually.
 
 <details>
   <summary><strong>Git Submodules</strong></summary><p>
@@ -142,6 +146,23 @@ $ git submodule update --init --recursive
 </p></details>
 
 ## Usage
+
+Creating a CheckmarkView is easy. You can do it either programmatically in code or in XIB. There are three types of checkmarks that you can create: `variant1`, `variant2` and `variant3`. The difference between the variants is related to the drawing points of the checkmark. See the screenshot for all the types of checkmarks. Checking or unchecking is done by controlling the `isChecked` property.
+
+```
+let checkmarkView = CheckmarkView()
+checkmarkView.checkmarkColor = UIColor.white // default is clear
+checkmarkView.checkmarkWidth = 5 // default is 3
+checkmarkView.checkmarkCapStyle = .round // default is .butt
+checkmarkView.checkmarkJoinStyle = .round // default is .miter
+checkmarkView.checkmarkType = CheckmarkView.checkmarkType.variant1.rawValue // default is 0 (variant1)
+checkmarkView.checkedFillColor = UIColor.blue // default is clear
+checkmarkView.uncheckedFillColor = UIColor.white // default is clear
+checkmarkView.borderWidth = 5 // default is 3
+checkmarkView.checkedBorderColor = UIColor.white // default is clear
+checkmarkView.uncheckedBorderColor = UIColor.white // default is clear
+checkmarkView.isChecked = true // default is false
+```
 
 ## Contributing
 

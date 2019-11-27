@@ -59,7 +59,7 @@ open class CheckmarkView: UIView {
         }
     }
     
-    @IBInspectable public var borderWidth: CGFloat = 5 {
+    @IBInspectable public var borderWidth: CGFloat = 3 {
         didSet {
             self.setNeedsDisplay()
         }
