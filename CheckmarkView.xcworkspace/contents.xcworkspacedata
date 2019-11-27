@@ -44,6 +44,6 @@
       location = "group:Package.resolved">
    </FileRef>
    <FileRef
-      location = "group:CheckmarkView.podspec">
+      location = "group:CheckmarkView-iOS.podspec">
    </FileRef>
 </Workspace>

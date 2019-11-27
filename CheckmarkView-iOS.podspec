@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
  s.name = 'CheckmarkView-iOS'
- s.version = '0.0.2'
+ s.version = '0.0.3'
  s.license = { :type => "MIT", :file => "LICENSE" }
  s.summary = 'Pixel perfect checkmark view for iOS'
  s.homepage = 'https://beewisedevelopment.com'
