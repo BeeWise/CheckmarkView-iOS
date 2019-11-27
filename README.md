@@ -40,7 +40,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 use_frameworks!
 
-pod 'CheckmarkView-iOS', '~> 0.0.2'
+pod 'CheckmarkView-iOS', '~> 0.0.3'
 ```
 
 Then, run the following command:
@@ -66,7 +66,7 @@ $ brew install carthage
 To integrate **CheckmarkView** into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "BeeWise/CheckmarkView-iOS" ~> 0.0.2
+github "BeeWise/CheckmarkView-iOS" ~> 0.0.3
 ```
 
 </details>
@@ -84,7 +84,7 @@ import PackageDescription
 let package = Package(
     name: "HelloCheckmarkView",
     dependencies: [
-        .package(url: "https://github.com/BeeWise/CheckmarkView-iOS.git", .upToNextMajor(from: "0.0.2"))
+        .package(url: "https://github.com/BeeWise/CheckmarkView-iOS.git", .upToNextMajor(from: "0.0.3"))
     ],
     targets: [
         .target(name: "HelloCheckmarkView", dependencies: ["CheckmarkView"])
